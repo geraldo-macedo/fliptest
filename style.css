@@ -1,40 +1,38 @@
-body {
-  color: #333;
-  font-family: Arial, Helvetica, serif;
-  font-weight: normal;
+/* * {
   margin: 0;
   padding: 0;
-  background: url(https://josetxu.com/img/fondo_blanco.png) repeat 0 0 #fff;
-}
+  box-sizing: border-box;
+} */
 
-h1 {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  margin: 0 0 5% 0;
-  padding: 0.5em;
-  margin: 0 0 5% 0;
+body {
+  background-color: #252525;
 }
 
 .cardBox {
+  
   float: left;
   font-size: 1.2em;
-  margin: 1% 0 0 1%;
   perspective: 800px;
   transition: all 0.3s ease 0s;
-  width: 23.7%;
+  margin-left: 2.8%;
+  margin-top: 3%;
+  width: 46%;
+  
 }
+
+
 
 .cardBox:hover .card {
   transform: rotateY( 180deg);
 }
 
 .card {
-  background: #222;
+  border-radius: 10px;
+  background: lightblue;
   cursor: default;
   height: 300px;
   transform-style: preserve-3d;
-  transition: transform 0.4s ease 0s;
+  transition: transform 0.8s ease 0s;
   width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
@@ -46,9 +44,10 @@ h1 {
 
 .card .front,
 .card .back {
+  border-radius: 10px;
   backface-visibility: hidden;
   box-sizing: border-box;
-  color: white;
+  color: #fff1d0;
   display: block;
   font-size: 1.2em;
   height: 100%;
@@ -56,12 +55,13 @@ h1 {
   position: absolute;
   text-align: center;
   width: 100%;
+  max-width: 767px;
 }
 
 .card .front strong {
-  background: #fff;
+  background: #fff1d0;
   border-radius: 100%;
-  color: #222;
+  color: #07a0c3;
   font-size: 1.5em;
   line-height: 30px;
   padding: 0 7px 4px 6px;
@@ -71,28 +71,12 @@ h1 {
   transform: rotateY( 180deg);
 }
 
-.card .back a {
-  padding: 0.3em 0.5em;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 1px;
-  font-size: 0.9em;
-  transition: all 0.2s ease 0s;
-}
-
-.card .back a:hover {
-  background: #fff;
-  color: #333;
-  text-shadow: 0 0 1px #333;
-}
-
 .cardBox:nth-child(1) .card .back {
-  background: cornflowerblue;
+  background: #086788;
 }
 
 .cardBox:nth-child(2) .card .back {
-  background: orange;
+  background: #f0c808;
 }
 
 .cardBox:nth-child(3) .card .back {
@@ -100,7 +84,7 @@ h1 {
 }
 
 .cardBox:nth-child(4) .card .back {
-  background: tomato;
+  background: #f7A156;
 }
 
 .cardBox:nth-child(2) .card {
